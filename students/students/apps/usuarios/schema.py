@@ -109,14 +109,20 @@ class DeleteStudent(graphene.Mutation):
     
     id = graphene.ID()
 
-  # The class attributes define the response of the mutation
-  product = graphene.Field(ProductType)
+  
+  student = graphene.Field(StudenttType)
 
   def mutate(self, info, id):
-    product = Product.objects.get(pk=id)
-    if product is not None:
-      product.delete()
-    return DeleteProduct(product=product)
+    student = Student.objects.get(pk=id)
+    if student is not None:
+      student.delete()
+    return DeleteStudent(student=student)
+
+
+class Mutation(graphene.ObjectType):
+  create_student = CreateStudent.Field()
+  update_student = UpdateStudent.Field()
+  delete_student = DeleteStudent.Field()
 
 
 
