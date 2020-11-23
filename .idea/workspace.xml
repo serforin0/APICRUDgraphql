@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="93137588-a7ee-4661-9f47-69ab314d4700" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1kh5573tyaj2nXfCy7DP6WC0Sym" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="aws" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="93137588-a7ee-4661-9f47-69ab314d4700" name="Default Changelist" comment="" />
+      <created>1606139807206</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606139807206</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="232" y="21" key="#Plugins" timestamp="1606140242760">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="232" y="21" key="#Plugins/0.0.1280.760@0.0.1280.760" timestamp="1606140242760" />
+    <state x="420" y="121" key="FileChooserDialogImpl" timestamp="1606140190856">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="420" y="121" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1606140190856" />
+    <state x="141" y="25" key="SettingsEditor" timestamp="1606140134815">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="141" y="25" key="SettingsEditor/0.0.1280.760@0.0.1280.760" timestamp="1606140134815" />
+    <state x="303" y="81" width="672" height="678" key="search.everywhere.popup" timestamp="1606140195278">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="303" y="81" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1606140195278" />
+  </component>
+</project>
