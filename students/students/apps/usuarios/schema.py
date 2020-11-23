@@ -110,7 +110,7 @@ class DeleteStudent(graphene.Mutation):
     id = graphene.ID()
 
   
-  student = graphene.Field(StudenttType)
+  student = graphene.Field(StudentType)
 
   def mutate(self, info, id):
     student = Student.objects.get(pk=id)
