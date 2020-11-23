@@ -34,6 +34,91 @@ class Query(graphene.ObjectType):
 		return Degree.objects.all()
 
 
+#************************ Student - mutations *************#
+
+
+class CreateStudent(graphene.Mutation):
+
+  
+  class Arguments:
+    name = graphene.String()
+    age = graphene.Int()
+    degree = graphene.List(graphene.ID) 
+    date_created = graphene.types.datetime.DateTime()
+
+  # What it returns
+  student = graphene.Field(StudentType)
+
+  
+  def mutate(self, info, name, age=None, degree=None, date_created=None):
+    student = Student.objects.create(
+      name = name,
+      age = age,
+      date_created = date_created
+    )
+
+    
+    if degree is not None:
+      degree_set = []
+      for degree_id in degree:
+        degree_object = Degree.objects.get(pk=degree_id)
+        degree_set.append(degree_object)
+      student.degree.set(degree_set)
+
+    student.save()
+   
+    return CreateStudent(
+      degree=degree
+    )
+
+class UpdateStudent(graphene.Mutation):
+  
+  class Arguments:
+    id = graphene.ID()
+    name = graphene.String()
+    age = graphene.Int()
+    degree = graphene.List(graphene.ID)
+    date_created = graphene.types.datetime.DateTime()
+
+  
+  student = graphene.Field(StudentType)
+
+
+
+  def mutate(self, info, id, name=None, age=None, degree=None, date_created=None):
+    student = Product.objects.get(pk=id)
+    student.name = name if name is not None else student.name
+    student.age = age if age is not None else student.age
+    student.date_created = date_created if date_created is not None else student.date_created
+
+    
+    if degree is not None:
+      degree_set = []
+      for degree_id in degree:
+        degree_object = degree.objects.get(pk=degree_id)
+        degree_set.append(degree_object)
+      student.degree.set(degree_set)
+
+    student.save()
+    
+    return UpdateStudent(student=student)
+
+
+class DeleteStudent(graphene.Mutation):
+  class Arguments:
+    
+    id = graphene.ID()
+
+  # The class attributes define the response of the mutation
+  product = graphene.Field(ProductType)
+
+  def mutate(self, info, id):
+    product = Product.objects.get(pk=id)
+    if product is not None:
+      product.delete()
+    return DeleteProduct(product=product)
+
+
 
 
 # class Query(graphene.ObjectType):
